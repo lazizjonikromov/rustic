@@ -14,10 +14,10 @@ const Header = () => {
             clickable: true,
           }}
           modules={[Pagination, Autoplay]}
-            // autoplay={{
-            //   delay: 2500,
-            //   disableOnInteraction: false,
-            // }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           className="mySwiper"
         >
           <SwiperSlide>
@@ -48,8 +48,12 @@ const Header = () => {
                     </ul>
                   </div>
                   <div className="col-12 col-md-10 d-flex flex-column text-start gap-5 head__text">
-                    <h5>Rustic Interior <br /> Studio</h5>
-                    <h2>Rustic and <br /> Modern</h2>
+                    <h5>
+                      Rustic Interior <br /> Studio
+                    </h5>
+                    <h2>
+                      Rustic and <br /> Modern
+                    </h2>
                     <div className="head__btn">
                       <a href="#" className="myBtn">
                         More About Us
@@ -87,9 +91,13 @@ const Header = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-12 col-md-10 d-flex flex-column text-start gap-5 head__text"> 
-                    <h5>Rustic Interior <br /> Studio</h5>
-                    <h2>Rustic and <br /> Modern</h2>
+                  <div className="col-12 col-md-10 d-flex flex-column text-start gap-5 head__text">
+                    <h5>
+                      Rustic Interior <br /> Studio
+                    </h5>
+                    <h2>
+                      Rustic and <br /> Modern
+                    </h2>
                     <div className="head__btn">
                       <a href="#" className="myBtn">
                         More About Us

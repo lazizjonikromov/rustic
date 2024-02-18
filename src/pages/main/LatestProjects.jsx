@@ -14,7 +14,7 @@ const LatestProjects = () => {
   return (
     <div className="latest__projects">
       <div className="container">
-        <div className="d-flex justify-content-between align-items-center mb-5">
+        <div className="latest__project-title d-flex justify-content-between align-items-center">
           <h2 className="title mb-0">Latest Projects</h2>
           <div className="sub__title mb-0">ALL PROJECTS</div>
         </div>

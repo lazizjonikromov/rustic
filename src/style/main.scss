@@ -5,7 +5,8 @@ body {
   font-family: "Inter", sans-serif;
 
   .container {
-    max-width: 1400px;
+    max-width: 1200px;
+    overflow: hidden;
   }
 
   h1,
@@ -16,6 +17,7 @@ body {
   h6,
   p {
     margin-bottom: 0;
+    font-weight: inherit;
   }
 
   img {
@@ -87,6 +89,10 @@ body {
     z-index: 10;
     max-height: fit-content;
 
+    .container {
+      max-width: 1400px;
+    }
+
     .nav-menu {
       li {
         a {
@@ -154,6 +160,10 @@ body {
     position: relative;
     height: 100vh;
 
+    .container {
+      max-width: 1400px;
+    }
+
     .swiper {
       width: 100%;
       height: 100%;
@@ -216,11 +226,11 @@ body {
       position: absolute;
       left: auto;
       z-index: 1;
-      bottom: auto!important;
-      left: auto!important;
-      right: 20px!important;
+      bottom: auto !important;
+      left: auto !important;
+      right: 20px !important;
       top: calc(60% - 80px);
-      width: auto!important;
+      width: auto !important;
 
       .swiper-pagination-bullet {
         display: block;
@@ -334,4 +344,156 @@ body {
       }
     }
   }
+
+  .sub__title {
+    color: #333;
+    line-height: 32px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    display: block;
+    text-align: start;
+  }
+
+  .title {
+    font-size: 42px;
+    line-height: 50px;
+    color: #000;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 7676px) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+
+  .services {
+    padding: 100px 0;
+    position: relative;
+
+    &:before{
+      position: absolute;
+      content: "";
+      background-image: url("../assets/pattern.png");
+      width: 336px;
+      height: 336px;
+      left: -165px;
+      top: 110px;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-top: 30px;
+    }
+
+    .container {
+      overflow: visible;
+    }
+
+    .service__content {
+      .service__boxes {
+        gap: 30px;
+        display: grid;
+
+        @media screen and (max-width: 992px) {
+          grid-template-columns: repeat(2, 1fr);
+          overflow-x: hidden;
+        }
+
+        @media screen and (max-width: 767px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .box {
+          border: 1px solid rgb(217 217 217);
+          padding: 30px 50px;
+          position: relative;
+
+          // @media screen and (max-width: 992px) {
+          //   width: 45%;
+          // }
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            height: 1px;
+            background-color: rgb(255 225 160);
+            transition-duration: 0.5s;
+            opacity: 0;
+            margin: auto;
+          }
+
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+            &:before {
+              opacity: 1;
+              height: 100%;
+              transition: height 0.3s linear;
+            }
+          }
+
+          @media screen and (max-width: 992px) {
+            padding: 30px;
+          }
+
+          i {
+            font-size: 54px;
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: 992px) {
+              font-size: 40px;
+            }
+          }
+
+          .box__text {
+            padding-left: 45px;
+            padding-right: 30px;
+
+            a {
+              color: inherit;
+              text-decoration: inherit;
+              font-size: 20px;
+              line-height: 26px;
+
+              &:hover {
+                text-decoration-line: underline;
+              }
+            }
+
+            p {
+              margin-top: 10px;
+              font-size: 14px;
+              color: rgb(94, 93, 93);
+            }
+          }
+        }
+      }
+    }
+
+    .service__image {
+      position: relative;
+
+      img {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media screen and (max-width: 992px) {
+          overflow: hidden;
+          position: relative;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  
+
 }

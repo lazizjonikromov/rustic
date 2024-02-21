@@ -3,6 +3,7 @@ import Header from "./Header";
 import Services from "./Services";
 import LatestProjects from "./LatestProjects";
 import About from "./About";
+import Price from "./Price";
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
       <Services />
       <LatestProjects />
       <About />
+      <Price />
     </>
   );
 };

@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navBar w-full z-10">
       <div className="container">
         <div className="row">
-          <div className="col-6 col-sm-8  col-lg-2">
+          <div className="col-6 col-sm-8 col-lg-2">
             <a href="/">
               <img src={logo} alt="" />
             </a>

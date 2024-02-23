@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { posts } from "../../data";
+import { Autoplay } from "swiper/modules";
 
 const Articles = () => {
   return (
@@ -30,6 +31,12 @@ const Articles = () => {
           pagination={{
             clickable: true,
           }}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
           className="mySwiper posts"
         >
           {posts.map((item, i) => (

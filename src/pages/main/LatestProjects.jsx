@@ -39,7 +39,7 @@ const LatestProjects = () => {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {latestProjects && latestProjects.map((item, i) => (
+          {latestProjects.map((item, i) => (
             <SwiperSlide key={i}>
               <Link to={item.path} className="project__item">
                 <div className="project__img">

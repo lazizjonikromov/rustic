@@ -5,6 +5,7 @@ import LatestProjects from "./LatestProjects";
 import About from "./About";
 import Price from "./Price";
 import Clients from "./Clients";
+import Articles from "./Articles";
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
       <About />
       <Price />
       <Clients />
+      <Articles />
     </>
   );
 };

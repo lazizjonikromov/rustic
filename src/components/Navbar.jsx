@@ -1,45 +1,70 @@
 import React, { useState } from "react";
-import logo from '../assets/logo.png';
+import logo from "../assets/logo.png";
+import logoBlack from "../assets/logo-black.png";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+
   const location = useLocation();
 
   const changeNavbar = () => {
-      if (window.scrollY >= 30) {
-          setNavbar(true);
-      } else {
-          setNavbar(false)
-      }
-  }
+    if (window.scrollY >= 30) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
 
-  window.addEventListener('scroll', changeNavbar);
+  window.addEventListener("scroll", changeNavbar);
 
   return (
-    <div className={`navBar w-full z-10 ${navbar ? 'active' : ''}`}>
+    <div
+      className={`navBar w-full z-10 ${
+        (navbar && location.pathname === "/") ||
+        (navbar && location.pathname === "/about")
+          ? "active"
+          : ""
+      } ${location.pathname === "/projects" ? "nav-white" : ""}`}
+    >
       <div className="container">
         <div className="row">
           <div className="col-6 col-sm-8 col-lg-2">
             <Link to={"/"}>
-              <img src={logo} alt="" />
+              {location.pathname === "/projects" ? (
+                <img src={logoBlack} alt="" />
+              ) : (
+                <img src={logo} alt="" />
+              )}
             </Link>
           </div>
           <div className="col-md-7 d-none d-lg-flex">
             <ul className="nav-menu d-flex gap-5 align-items-center">
-              <li className={`${location.pathname === '/' ? 'active' : ''}`}>
+              <li className={`${location.pathname === "/" ? "active" : ""}`}>
                 <Link to={"/"}>Home</Link>
               </li>
-              <li className={`${location.pathname === '/about' ? 'active' : ''}`}>
+              <li
+                className={`${location.pathname === "/about" ? "active" : ""}`}
+              >
                 <Link to={"/about"}>About</Link>
               </li>
-              <li className={`${location.pathname === '/projects' ? 'active' : ''}`}>
-                <Link to={"/"}>Projects</Link>
+              <li
+                className={`${
+                  location.pathname === "/projects" ? "active" : ""
+                }`}
+              >
+                <Link to={"/projects"}>Projects</Link>
               </li>
-              <li className={`${location.pathname === '/posts' ? 'active' : ''}`}>
+              <li
+                className={`${location.pathname === "/posts" ? "active" : ""}`}
+              >
                 <Link to={"/"}>Posts</Link>
               </li>
-              <li className={`${location.pathname === '/contact' ? 'active' : ''}`}>
+              <li
+                className={`${
+                  location.pathname === "/contact" ? "active" : ""
+                }`}
+              >
                 <Link to={"/"}>Contact</Link>
               </li>
             </ul>

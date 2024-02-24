@@ -5,6 +5,7 @@ import Main from "./pages/main/Main"
 import Footer from "./components/Footer"
 import ScrollToTop from "./components/ScrollToTop"
 import Projects from "./pages/our-projects/Projects"
+import Posts from "./pages/our-posts/Posts"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Main />}/>
         <Route path="/about" element={<AboutUs />}/>
         <Route path="/projects" element={<Projects />}/>
+        <Route path="/posts" element={<Posts />}/>
       </Routes>
 
       <Footer />

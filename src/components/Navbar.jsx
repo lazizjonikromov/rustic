@@ -25,13 +25,21 @@ const Navbar = () => {
         (navbar && location.pathname === "/about")
           ? "active"
           : ""
-      } ${location.pathname === "/projects" ? "nav-white" : ""}`}
+      } ${
+        location.pathname === "/projects" ||
+        location.pathname === "/posts" ||
+        location.pathname === "/contact"
+          ? "nav-white"
+          : ""
+      }`}
     >
       <div className="container">
         <div className="row">
           <div className="col-6 col-sm-8 col-lg-2">
             <Link to={"/"}>
-              {location.pathname === "/projects" ? (
+              {location.pathname === "/projects" ||
+              location.pathname === "/posts" ||
+              location.pathname === "/contact" ? (
                 <img src={logoBlack} alt="" />
               ) : (
                 <img src={logo} alt="" />
@@ -58,14 +66,14 @@ const Navbar = () => {
               <li
                 className={`${location.pathname === "/posts" ? "active" : ""}`}
               >
-                <Link to={"/"}>Posts</Link>
+                <Link to={"/posts"}>Posts</Link>
               </li>
               <li
                 className={`${
                   location.pathname === "/contact" ? "active" : ""
                 }`}
               >
-                <Link to={"/"}>Contact</Link>
+                <Link to={"/contact"}>Contact</Link>
               </li>
             </ul>
           </div>

@@ -4,6 +4,7 @@ import AboutHeader from './AboutHeader'
 import About from '../main/About'
 import Services from '../main/Services'
 import Clients from '../main/Clients'
+import Workers from './Workers';
 
 const AboutUs = () => {
   return (
@@ -12,6 +13,7 @@ const AboutUs = () => {
       <About />
       <Services />
       <Clients />
+      <Workers />
     </>
   )
 }

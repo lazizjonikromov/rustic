@@ -2,7 +2,7 @@
 
 ## Demo
 
-[View Demo](https://sascard.netlify.app/)
+[View Demo](https://rustic-app.netlify.app)
 
 ## Features
 

@@ -1,0 +1,116 @@
+.contact {
+  padding-top: 250px;
+  border-bottom: 1px solid #d3d1d1;
+  padding-bottom: 150px;
+  
+
+  @media screen and (max-width: 576px) {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+
+  .contact__box {
+    display: grid;
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .contact__info {
+      @media screen and (min-width: 992px) {
+        grid-column: span 2 / span 2;
+      }
+
+      h2 {
+        font-size: 48px;
+      }
+
+      h3 {
+        font-weight: 600;
+        line-height: 2.25rem;
+        font-size: 1.875rem;
+      }
+
+      ul {
+        font-size: 14px;
+        line-height: 27px;
+        color: rgb(51, 51, 51);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        :nth-child(1) {
+          max-width: 270px;
+        }
+      }
+
+      .myBtn {
+        margin-top: 50px;
+        background-color: #fff;
+        color: #000;
+        line-height: 30px;
+        font-size: 14px;
+        padding: 11px 32px;
+        border: 1px solid rgb(150, 150, 150);
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .contact__send {
+      @media screen and (min-width: 992px) {
+        grid-column: span 3 / span 3;
+      }
+
+      h2 {
+        margin-bottom: 75px;
+        line-height: 22px;
+        text-transform: uppercase;
+        font-size: 18px;
+
+        @media screen and (max-width: 992px) {
+          margin-top: 100px;
+          margin-bottom: 50px;
+        }
+      }
+
+      input, textarea {
+        padding: 15px 0;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #d3d1d1;
+
+        &:focus-visible {
+          border-color: #000;
+
+          &::placeholder {
+            color: #000;
+          } 
+        }
+
+      }
+
+      .send__inner-box {
+        gap: 20px;
+
+        @media screen and (min-width: 576px) {
+          display: flex;
+        }
+      }
+
+      textarea {
+        margin-top: 35px;
+      }
+
+      .myBtn {
+        margin-top: 55px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+      }
+
+    }
+  }
+}

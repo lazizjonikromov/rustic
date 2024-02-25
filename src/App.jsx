@@ -8,12 +8,16 @@ import Projects from "./pages/our-projects/Projects"
 import Posts from "./pages/our-posts/Posts"
 import Contact from "./pages/contact/Contact"
 import UpButton from "./components/UpButton"
+import Menu from "./components/Menu"
+import { useState } from "react"
 
 function App() {
+  const [burger, setBurger] = useState(false);
 
   return (
     <>
-      <Navbar />
+      <Navbar setBurger={setBurger}/>
+      <Menu burger={burger} setBurger={setBurger}/>
       <ScrollToTop />
 
       <Routes>

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import logoBlack from "../assets/logo-black.png";
 import { Link, useLocation } from "react-router-dom";
+import Menu from "./Menu";
 
-const Navbar = () => {
+const Navbar = ({ setBurger }) => {
   const [navbar, setNavbar] = useState(false);
 
   const location = useLocation();
@@ -88,8 +89,9 @@ const Navbar = () => {
             </ul>
 
             <div className="burger">
-              <i className="bi bi-list"></i>
+              <i onClick={() => setBurger(true)} className="bi bi-list"></i>
             </div>
+            
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ body {
     transform: translateY(100px);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-    z-index: 999999;
+    z-index: 9;
 
     &.active {
       opacity: 1;
@@ -141,6 +141,7 @@ body {
     max-height: fit-content;
     position: fixed;
     transition-duration: 0.5s;
+    margin-top: -1px;
 
     &.active {
       background-color: rgb(17, 17, 17);
@@ -250,6 +251,89 @@ body {
         cursor: pointer;
       }
     }
+  }
+
+  .off__menu {
+
+    .off__canvas-modal {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      transition-duration: .9s;
+      transform: translateX(100%);
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+      z-index: 10;
+      height: 100%;
+      background-color: #000;
+      transition-duration: .5s;
+      transition-timing-function: linear;
+    }
+
+    &.active {      
+      z-index: 11;
+
+      .off__canvas-modal {
+        content: "";
+        visibility: visible;
+        width: 100%;
+        opacity: .9;
+        transform: translateX(0);
+      }
+
+      .off__menu-lists {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    .off__menu-lists {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      z-index: 20;
+      height: 100%;
+      width: 300px;
+      background-color: #fff;
+      padding: 1.25rem;
+      opacity: .9;
+      transition-delay: .35s;
+      transition-duration: .45s !important;
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+
+      ul {
+        :nth-child(1){
+          svg {
+            transition-property: all;
+            transition-duration: .15s;
+            opacity: .8;
+            font-size: 24px;
+            cursor: pointer;
+          }
+        }
+
+        .off__lists-text {
+          border-top: 1px solid #d5d5d5;
+          padding: 15px 0 !important;
+          font-size: 15px;
+          font-weight: 600;
+          text-transform: uppercase;
+          line-height: 1.5rem;
+
+          a {
+            transition-duration: .1s;
+
+            &:hover {
+              color: #ffe1a0;
+            }
+          }
+        }
+      }
+    }
+
   }
 
   .header {
@@ -1225,4 +1309,5 @@ body {
       }
     }
   }
+
 }

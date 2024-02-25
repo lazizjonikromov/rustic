@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop"
 import Projects from "./pages/our-projects/Projects"
 import Posts from "./pages/our-posts/Posts"
 import Contact from "./pages/contact/Contact"
+import UpButton from "./components/UpButton"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <UpButton />
     </>
   )
 }

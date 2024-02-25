@@ -36,6 +36,43 @@ body {
     color: inherit;
   }
 
+  .up {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 50px;
+    // left: 7.5vh;
+    right: 40px;
+    background: #000;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 999999;
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }    
+
+    &:hover {
+      background-color: #ffe1a0;
+    }
+
+    @media (max-width: 767px) {
+      right: 20px;
+      bottom: 30px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
   .myBtn {
     position: relative;
     z-index: 2;

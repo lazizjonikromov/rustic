@@ -8,7 +8,6 @@
 
 - Styled 
 - Animated
-- Structural Multi Components
 - Responsive Web Design
 
 ## Technologies 
